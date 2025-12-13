@@ -2,8 +2,6 @@ import { Link } from "react-router";
 import { PasswordForm } from "../features/PasswordChecker/PasswordForm";
 import { useEffect, useState } from "react";
 
-// import { validatePassword } from './password'; // Import Logic TDD kita
-
 export const PasswordPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -21,7 +19,7 @@ export const PasswordPage = () => {
 
   return (
     <div className="w-xl mt-10 border border-gray-500 rounded-lg p-6">
-      {/* Header & Tombol Kembali */}
+      {/* Header & Back Button */}
       <div className="mb-6 flex items-center justify-between space-y-4">
         <h2 className="text-2xl font-bold text-slate-200">
           🔒 Password Validator
@@ -33,7 +31,6 @@ export const PasswordPage = () => {
           ← Back to Menu
         </Link>
       </div>
-      {/* Card Utama */}
       <PasswordForm isOpen={isOpen} setIsOpen={setIsOpen} />
       {isOpen && (
         <div className="absolute z-50 bg-gray-950/70 inset-0 grid place-items-center">

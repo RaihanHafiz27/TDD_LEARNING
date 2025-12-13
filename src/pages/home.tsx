@@ -16,7 +16,7 @@ const datas: CardType[] = [
     title: "🛒 Shopping Cart",
     level: "intermediate",
     desc: "Latihan Logic Array & Math. Menghitung total belanja, pajak, dan diskon.",
-    link: "#",
+    link: "/shopping",
   },
   {
     id: 3,
