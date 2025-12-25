@@ -1,10 +1,8 @@
-// 1. Define the output form of our function.
 export interface PasswordResult {
   isValid: boolean;
   errors: string[];
 }
 
-// 2. Pure Function: Input string -> Output object
 export const validatePassword = (password: string): PasswordResult => {
   const errors: string[] = [];
 
@@ -24,7 +22,8 @@ export const validatePassword = (password: string): PasswordResult => {
   }
 
   return {
-    isValid: errors.length === 0, // Logic for case 4 will be success (valid) if length = 0
+    // Logic for case 4 will be success (valid) if length = 0
+    isValid: errors.length === 0,
     errors: errors,
   };
 };

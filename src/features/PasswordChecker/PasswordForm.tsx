@@ -10,11 +10,7 @@ export const PasswordForm = ({
 }) => {
   const [password, setPassword] = useState<string>("");
 
-  console.log(password);
-
   const validation = validatePassword(password);
-
-  console.log(validation);
 
   return (
     <div className="space-y-8">

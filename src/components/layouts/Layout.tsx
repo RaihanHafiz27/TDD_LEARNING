@@ -2,13 +2,13 @@ import { Outlet } from "react-router";
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-800 font-sans p-6 relative space-y-4">
+    <div className="min-h-screen bg-gray-900 text-gray-800 font-sans p-6 space-y-4 flex flex-col relative">
       <h1>
         <a href="/" className="text-xl font-bold text-slate-100">
           Learning Lab
         </a>
       </h1>
-      <div className="w-full h-full grid place-items-center">
+      <div className="flex grow ">
         <Outlet />
         <div className="absolute bottom-4 right-4 flex items-center gap-3">
           {/* Text Arrow */}

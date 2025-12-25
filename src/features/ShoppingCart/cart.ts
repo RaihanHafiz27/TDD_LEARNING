@@ -1,4 +1,3 @@
-// 1. Define the Data Item Structure
 export interface CartItem {
   id: number;
   name: string;
@@ -6,14 +5,12 @@ export interface CartItem {
   qty: number;
 }
 
-// 2. Define Output Calculation
 export interface CartSummary {
   subtotal: number;
   discountAmount: number;
   total: number;
 }
 
-// 3. Main Logic
 export const calculateCart = (items: CartItem[]): CartSummary => {
   // Logic for Calculate Subtotal
   const subtotal = items.reduce((sum, item) => {
@@ -36,7 +33,7 @@ export const calculateCart = (items: CartItem[]): CartSummary => {
   };
 };
 
-// 4. Helper Function (Formatter)
+// Helper Function (Formatter)
 export const formatRupiah = (amount: number): string => {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",

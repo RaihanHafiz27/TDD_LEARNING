@@ -4,8 +4,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { PasswordPage } from "./pages/password";
 import HomePage from "./pages/home";
-import { ShoppingPage } from "./pages/shopping";
+import { ShoppingPage } from "./pages/cart";
 import { Layout } from "./components/layouts/Layout";
+import { EmployeePage } from "./pages/employee";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
         element: <PasswordPage />,
       },
       {
-        path: "/shopping",
+        path: "/cart",
         element: <ShoppingPage />,
+      },
+      {
+        path: "/employees",
+        element: <EmployeePage />,
       },
     ],
   },

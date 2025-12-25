@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-type Level = "beginner" | "intermediate" | "advance";
+type Level = "beginner" | "intermediate" | "advanced";
 
 export interface CardType {
   id: number;
@@ -13,7 +13,7 @@ export interface CardType {
 const statusColor: Record<Level, string> = {
   beginner: "bg-green-100 text-green-800",
   intermediate: "bg-yellow-100 text-yellow-800",
-  advance: "bg-red-100 text-red-800",
+  advanced: "bg-red-100 text-red-800",
 };
 
 export const CartProject = ({ link, title, level, desc }: CardType) => {
