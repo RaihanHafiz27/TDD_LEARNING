@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# 🧪 Test-Driven Development Learning Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a **personal learning lab** for practicing **Test-Driven Development (TDD)** using **React, TypeScript, and Vitest**.
 
-Currently, two official plugins are available:
+It focuses on building a strong **test-first mindset** by consistently applying the **Red → Green → Refactor** cycle, with an emphasis on clean, predictable, and maintainable logic.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This lab is created to:
+- Practice writing tests **before** implementation
+- Improve code quality through testability
+- Strengthen logical thinking and problem decomposition
+- Refactor code safely with confidence backed by tests
 
-## Expanding the ESLint configuration
+The focus is on **application logic and behavior**, not UI complexity.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 Philosophy
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+TDD is not just about testing — it is a **design approach**.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+In this repository:
+- Tests define expected behavior
+- Implementation follows specification
+- Refactoring is intentional and safe
+- Code evolves through feedback from tests
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 What You Will Find
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Pure and deterministic logic
+- Clear separation between tests and implementation
+- Well-structured test cases written with **Vitest**
+- Incremental improvements driven by tests
+
+Tests act as both **verification** and **living documentation**.
+
+---
+
+## 🚀 Tech Stack
+
+- React
+- TypeScript
+- Vitest
+- Minimal dependencies to keep the focus on TDD principles
+
+---
+
+## 📚 How to Use
+
+- Explore the code to understand test-driven design in React
+- Use test cases as behavioral documentation
+- Clone and extend this lab for your own TDD practice
+
+---
+
+## 🧑‍💻 Author
+
+**Muhammad Raihan**  
+Frontend Developer  
+Focused on clean architecture, testing strategies, and scalable logic.
+
+---
+
+## ⭐ Note
+
+This repository is a **learning space**, not a finished product.
+
+The value lies in the process, not just the final code.
