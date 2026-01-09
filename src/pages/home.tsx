@@ -4,41 +4,36 @@ import {
 } from "../components/fragments/card/CardProject";
 
 const datas: CardType[] = [
-  // =================================================================
-  // 🧠 PART 1: LOGIC & ALGORITHMS (Unit Testing - Jest/Vitest)
-  // Fokus: Input -> Process -> Output. Tidak peduli tampilan.
-  // =================================================================
-
   {
     id: 1,
     title: "🔒 Password Validator",
     level: "beginner",
-    desc: "Logic String & Regex. Memastikan password memenuhi kriteria (Min length, Angka, Kapital).",
+    desc: "Logic String & Regex. Ensures that passwords meet criteria (minimum length, numbers, capital letters).",
     link: "/password",
   },
   {
     id: 2,
     title: "🛒 Shopping Cart Logic",
     level: "intermediate",
-    desc: "Logic Array & Math. Menghitung subtotal, diskon bersyarat, dan formatting currency.",
+    desc: "Logic Array & Math. Calculate subtotals, conditional discounts, and currency formatting.",
     link: "/cart",
   },
   {
     id: 3,
     title: "👥 Employee Filter",
     level: "intermediate",
-    desc: "Logic Search. Filter array of objects berdasarkan keyword nama dan status active/inactive.",
+    desc: "Logic Search. Filter an array of objects based on the keyword name and active/inactive status.",
     link: "/employees",
   },
-  // --- Mulai dari sini bisa di-uncomment satu per satu saat mau dikerjakan ---
-  /*
+
   {
     id: 4,
     title: "📄 Pagination Core",
     level: "intermediate",
     desc: "Logic Math. Input: totalData & perPage. Output: totalPage, startIndex, endIndex, hasNextPage.",
-    link: "/logic-pagination",
+    link: "/pagination",
   },
+  /*
   {
     id: 5,
     title: "🔗 Slug Generator",

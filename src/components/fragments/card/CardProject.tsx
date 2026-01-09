@@ -32,7 +32,7 @@ export const CartProject = ({ link, title, level, desc }: CardType) => {
           {level}
         </span>
       </div>
-      <p className="text-gray-500 group-hover:text-gray-400 transition-all duration-500 text-sm">
+      <p className="text-gray-500 group-hover:text-gray-400 transition-all duration-500 text-sm tracking-wide leading-relaxed">
         {desc}
       </p>
     </Link>

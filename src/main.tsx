@@ -7,6 +7,7 @@ import HomePage from "./pages/home";
 import { ShoppingPage } from "./pages/cart";
 import { Layout } from "./components/layouts/Layout";
 import { EmployeePage } from "./pages/employee";
+import { PaginationPage } from "./pages/pagination";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/employees",
         element: <EmployeePage />,
+      },
+      {
+        path: "/pagination",
+        element: <PaginationPage />,
       },
     ],
   },
