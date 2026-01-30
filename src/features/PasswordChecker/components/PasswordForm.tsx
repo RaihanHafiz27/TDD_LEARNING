@@ -1,17 +1,12 @@
-import { useState } from "react";
-import { validatePassword } from "./password";
+import type { PasswordProps } from "../PassowrdView";
 
 export const PasswordForm = ({
   isOpen,
   setIsOpen,
-}: {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
-  const [password, setPassword] = useState<string>("");
-
-  const validation = validatePassword(password);
-
+  password,
+  setPassword,
+  validation,
+}: PasswordProps) => {
   return (
     <div className="space-y-8">
       {/* input password */}
@@ -19,7 +14,7 @@ export const PasswordForm = ({
         onChange={(e) => setPassword(e.target.value)}
         type="text"
         placeholder="*******"
-        className="border border-gray-300 w-full p-2 rounded-lg focus:border-none focus:ring-2 focus:ring-sky-600 outline-none placeholder:text-gray-500 text-slate-200"
+        className="border border-gray-300 w-full p-2 rounded-lg focus:border-none focus:ring-2 focus:ring-indigo-600 outline-none placeholder:text-gray-500 text-slate-200"
       />
 
       {/* Feedback message */}
@@ -56,7 +51,7 @@ export const PasswordForm = ({
         disabled={!validation.isValid}
         className={`w-full py-3 rounded-lg font-bold transition-all ${
           validation.isValid
-            ? "bg-blue-600 text-white hover:bg-blue-700 cursor-pointer"
+            ? "bg-indigo-600 text-slate-200 hover:bg-indigo-700 cursor-pointer"
             : "bg-gray-300 text-gray-500 cursor-not-allowed"
         }`}
       >

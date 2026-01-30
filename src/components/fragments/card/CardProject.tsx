@@ -20,10 +20,10 @@ export const CartProject = ({ link, title, level, desc }: CardType) => {
   return (
     <Link
       to={link}
-      className="group block p-6 bg-gray-200/10  rounded-lg hover:border-2 hover:border-sky-600 transition-all duration-500 hover:scale-105"
+      className="group block p-6 bg-indigo-300/5  rounded-lg transition-all duration-500 hover:scale-105"
     >
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-gray-700 group-hover:text-slate-200 transition-all duration-500">
+        <h3 className="text-lg font-bold text-gray-500 group-hover:text-slate-200 transition-all duration-500">
           {title}
         </h3>
         <span
@@ -32,7 +32,7 @@ export const CartProject = ({ link, title, level, desc }: CardType) => {
           {level}
         </span>
       </div>
-      <p className="text-gray-500 group-hover:text-gray-400 transition-all duration-500 text-sm tracking-wide leading-relaxed">
+      <p className="text-gray-500 group-hover:text-slate-300 transition-all duration-500 text-sm tracking-wide leading-relaxed">
         {desc}
       </p>
     </Link>

@@ -33,6 +33,13 @@ const datas: CardType[] = [
     desc: "Logic Math. Input: totalData & perPage. Output: totalPage, startIndex, endIndex, hasNextPage.",
     link: "/pagination",
   },
+  {
+    id: 5,
+    title: "⏳ Relative Time",
+    level: "intermediate",
+    desc: "Logic Date. Calculates the time difference between now and the timestamp: '5 minutes ago', 'Yesterday'.",
+    link: "/logic-time",
+  },
   /*
   {
     id: 5,
@@ -55,13 +62,7 @@ const datas: CardType[] = [
     desc: "Logic Math/Base16. Mengubah kode warna '#FF0000' menjadi object {r: 255, g: 0, b: 0}.",
     link: "/logic-color",
   },
-  {
-    id: 8,
-    title: "⏳ Relative Time",
-    level: "intermediate",
-    desc: "Logic Date. Menghitung selisih waktu sekarang dengan timestamp: '5 menit yang lalu', 'Kemarin'.",
-    link: "/logic-time",
-  },
+ 
   {
     id: 9,
     title: "🛡️ RBAC Permission",
@@ -158,7 +159,7 @@ const datas: CardType[] = [
 const HomePage = () => {
   return (
     <div className="grow grid place-items-center">
-      <div className="space-y-8 max-w-4xl">
+      <div className="space-y-12 max-w-4xl">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-extrabold text-slate-100">
             Frontend TDD Lab 🧪

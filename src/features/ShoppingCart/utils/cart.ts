@@ -5,13 +5,13 @@ export interface CartItem {
   qty: number;
 }
 
-export interface CartSummary {
+export interface ItemSummary {
   subtotal: number;
   discountAmount: number;
   total: number;
 }
 
-export const calculateCart = (items: CartItem[]): CartSummary => {
+export const calculateCart = (items: CartItem[]): ItemSummary => {
   // Logic for Calculate Subtotal
   const subtotal = items.reduce((sum, item) => {
     return sum + item.price * item.qty;

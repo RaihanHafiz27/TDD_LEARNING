@@ -5,13 +5,14 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import { PasswordPage } from "./pages/password";
 import HomePage from "./pages/home";
 import { ShoppingPage } from "./pages/cart";
-import { Layout } from "./components/layouts/Layout";
+import { PageLayout } from "./components/layouts/PageLayout";
 import { EmployeePage } from "./pages/employee";
 import { PaginationPage } from "./pages/pagination";
+import { TimeView } from "./pages/time";
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    element: <PageLayout />,
     children: [
       {
         path: "/",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/pagination",
         element: <PaginationPage />,
       },
+      {
+        path: "/logic-time",
+        element: <TimeView />,
+      },
     ],
   },
 ]);
@@ -40,5 +45,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
