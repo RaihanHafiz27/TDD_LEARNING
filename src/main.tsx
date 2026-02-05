@@ -8,7 +8,7 @@ import { ShoppingPage } from "./pages/cart";
 import { PageLayout } from "./components/layouts/PageLayout";
 import { EmployeePage } from "./pages/employee";
 import { PaginationPage } from "./pages/pagination";
-import { TimeView } from "./pages/time";
+import { TimePage } from "./pages/time";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/logic-time",
-        element: <TimeView />,
+        element: <TimePage />,
       },
     ],
   },

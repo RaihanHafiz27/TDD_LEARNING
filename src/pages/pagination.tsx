@@ -1,17 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router";
-import { getPaginationState } from "../features/Pagination/pagination";
-import { PaginationBtn } from "../features/Pagination/PaginationBtn";
+import { getPaginationState } from "../features/Pagination/utils/pagination";
+import { PaginationView } from "../features/Pagination/components/PaginationView";
 
 export const PaginationPage = () => {
-  // 1. Setup Dummy Data (Array angka 1 sampai 123)
-  const dummyData = Array.from(
-    { length: 123 },
-    (_, i) => `Item Data #${i + 1}`
-  );
+  // 1. Setup Dummy Data (Array number from 1 to 25)
+  const dummyData = Array.from({ length: 25 }, (_, i) => `Item Data #${i + 1}`);
 
   // 2. State Page
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const pageSize = 5;
 
   // 3. Call our Logic TDD
@@ -24,47 +20,28 @@ export const PaginationPage = () => {
   // 4. Slice Original Data base on counting logic
   const visibleData = dummyData.slice(
     pagination.startIndex,
-    pagination.endIndex
+    pagination.endIndex,
   );
 
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < pagination.totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
   return (
-    <div className="grow grid place-items-center">
-      <div className="max-w-2xl border border-gray-200 rounded-2xl p-6">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-slate-200">
-            📄 Pagination Core
-          </h2>
-          <Link to="/" className="text-blue-600 hover:underline text-sm">
-            ← Menu
-          </Link>
-        </div>
-
-        {/* Display Data List*/}
-        <div className="bg-transparent  shadow-sm  overflow-hidden mb-6">
-          <ul className="divide-y divide-gray-100">
-            {visibleData.map((item, index) => (
-              <li
-                key={index}
-                className="p-4 hover:bg-gray-500/10 transition text-gray-400"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          {/* Empty State / Error handling */}
-          {visibleData.length === 0 && (
-            <div className="p-8 text-center text-gray-500">Data Kosong</div>
-          )}
-        </div>
-
-        {/* Controls */}
-        <PaginationBtn
-          pagination={pagination}
-          dataLength={dummyData.length}
-          setCurrentPage={setCurrentPage}
-        />
-      </div>
-    </div>
+    <PaginationView
+      dataVisible={visibleData}
+      dataLength={dummyData.at.length}
+      pagination={pagination}
+      handlePrev={handlePrev}
+      handleNext={handleNext}
+    />
   );
 };
