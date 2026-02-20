@@ -9,6 +9,7 @@ import { PageLayout } from "./components/layouts/PageLayout";
 import { EmployeePage } from "./pages/employee";
 import { PaginationPage } from "./pages/pagination";
 import { TimePage } from "./pages/time";
+import { SlugPage } from "./pages/slug";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/logic-time",
         element: <TimePage />,
+      },
+      {
+        path: "/logic-slug",
+        element: <SlugPage />,
       },
     ],
   },

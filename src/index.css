@@ -29,6 +29,22 @@
   animation: gradient 12s linear infinite;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Route scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #312c85;
+}
+
+/* Make a thumb for slider */
+::-webkit-scrollbar-thumb {
+  background-color: #4f39f6;
+  border-radius: 10px;
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

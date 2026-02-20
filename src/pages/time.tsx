@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { toRelativeTime } from "../features/TimeConverter/timeUtils";
+import { toRelativeTime } from "../features/TimeConverter/utils/timeUtils";
 import { TimeView } from "../features/TimeConverter/components/TimeView";
 
 export interface Notification {
