@@ -10,6 +10,7 @@ import { EmployeePage } from "./pages/employee";
 import { PaginationPage } from "./pages/pagination";
 import { TimePage } from "./pages/time";
 import { SlugPage } from "./pages/slug";
+import { MaskingPage } from "./pages/masking";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/logic-slug",
         element: <SlugPage />,
+      },
+      {
+        path: "/logic-masking",
+        element: <MaskingPage />,
       },
     ],
   },

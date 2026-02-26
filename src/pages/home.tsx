@@ -48,21 +48,13 @@ const datas: CardType[] = [
     desc: "Logic Regex. Change `Hello World & How are you?` to `hello-world-how-are-you`. Handle strange symbols.",
     link: "/logic-slug",
   },
-  // {
-  //   id: 6,
-  //   title: "💳 Credit Card Masking",
-  //   level: "beginner",
-  //   desc: "Logic String. Mengubah '4500 1234 5678 9010' menjadi '**** **** **** 9010'. Handle spasi/dash.",
-  //   link: "/logic-masking",
-  // },
-  // {
-  //   id: 7,
-  //   title: "🎨 Hex to RGB Converter",
-  //   level: "intermediate",
-  //   desc: "Logic Math/Base16. Mengubah kode warna '#FF0000' menjadi object {r: 255, g: 0, b: 0}.",
-  //   link: "/logic-color",
-  // },
-
+  {
+    id: 7,
+    title: "💳 Credit Card Masking",
+    level: "beginner",
+    desc: "Logic String. Change '4500 1234 5678 9010' to '**** **** **** 9010'. Handle spaces/dashes.",
+    link: "/logic-masking",
+  },
   // {
   //   id: 9,
   //   title: "🛡️ RBAC Permission",
