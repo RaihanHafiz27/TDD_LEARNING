@@ -11,6 +11,7 @@ import { PaginationPage } from "./pages/pagination";
 import { TimePage } from "./pages/time";
 import { SlugPage } from "./pages/slug";
 import { MaskingPage } from "./pages/masking";
+import { RBACPage } from "./pages/rbac";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/logic-masking",
         element: <MaskingPage />,
+      },
+      {
+        path: "/logic-rbac",
+        element: <RBACPage />,
       },
     ],
   },

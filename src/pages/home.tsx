@@ -55,13 +55,13 @@ const datas: CardType[] = [
     desc: "Logic String. Change '4500 1234 5678 9010' to '**** **** **** 9010'. Handle spaces/dashes.",
     link: "/logic-masking",
   },
-  // {
-  //   id: 9,
-  //   title: "🛡️ RBAC Permission",
-  //   level: "advanced",
-  //   desc: "Logic Security. Fungsi `canAccess(role, resource)`. Admin tembus semua, User terbatas.",
-  //   link: "/logic-rbac",
-  // },
+  {
+    id: 8,
+    title: "🛡️ RBAC Permission",
+    level: "advanced",
+    desc: "Logic Security. Function `canAccess(role, resource)`. Admin has full access, User has limited access.",
+    link: "/logic-rbac",
+  },
   // {
   //   id: 10,
   //   title: "🔄 Deep Object Compare",
@@ -151,11 +151,15 @@ const HomePage = () => {
   return (
     <div className="grow grid place-items-center">
       <div className="space-y-12 max-w-4xl">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-extrabold text-slate-100">
-            Frontend TDD Lab 🧪
-          </h1>
-          <p className="text-lg text-gray-400">
+        <div className="flex flex-col justify-center items-center space-y-4">
+          <div className=" flex items-center space-x-2">
+            <h1 className="text-4xl font-extrabold text-slate-100">
+              Frontend TDD Lab
+            </h1>
+            <img src="/public/experiment.png" alt="exp" className="w-12 h-12" />
+          </div>
+
+          <p className="text-lg text-gray-400 text-center">
             A series of frontend case studies that I developed as part of my
             learning <br />
             journey in applying{" "}
